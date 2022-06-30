@@ -1,0 +1,92 @@
+
+
+body{
+    background-color:#C2A0E8;
+}
+.blackoutline{
+    height: 97vh;
+    width: 31.5%;
+    position: fixed;
+    background-color: black;
+    border-top-left-radius: 25px;
+    margin-left: 3vh;
+}
+  
+button {    
+    margin-left: 3.5vh;
+    overflow-y:scroll;
+    position: fixed;
+    border: none ; 
+    font-size:0; 
+    text-align: left;
+    height: 96vh;
+    width: 31%;
+    margin-top: .5vh;
+    margin-left: 3.5vh;
+    background: #D1FEB8;
+    border-top-left-radius: 25px;
+}
+
+
+
+.intro{
+    padding-top: 60vh;
+    font-size: 12pt;
+    padding-right: 4vh;
+    padding-left: 2vh;
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.2;
+    color:black;
+    border: 4px black;
+
+}
+.blackoutline2{
+    height: 97vh;
+    position: fixed;
+    width: 63.5%;
+    left: 34%;
+    background-color:black;
+    border-top-right-radius: 25px;
+    margin-right: 3vh;
+}
+.panel2{
+    margin-top: .5vh;
+    height: 96vh;
+    position: fixed;
+    width: 63%;
+    left: 34.2%;
+    background-color:#FEFBEA;
+    border-top-right-radius: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 2vh;
+
+}
+a{
+    color: black;
+    font-weight: bold;
+}
+
+path {
+  fill: transparent;
+}
+.rotatingtext{
+    height: 100vh;
+    width: 100%;
+    margin-left: 14%;
+    margin-top: 10%;
+}
+
+svg { width: 400%; }
+svg textPath { 
+  font-size: 30px;
+	font-family:  'Poppins', sans-serif;
+    text-transform: uppercase;
+	letter-spacing: 20px;
+    fill: #111;
+    font-weight: bold;
+  background: #333;
+}
+
+
