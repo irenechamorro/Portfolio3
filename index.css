@@ -25,12 +25,12 @@ button {
     margin-left: 3.5vh;
     background: #D1FEB8;
     border-top-left-radius: 25px;
+    scroll-snap-type: y mandatory
 }
 
 
 
 .intro{
-    padding-top: 60vh;
     font-size: 12pt;
     padding-right: 4vh;
     padding-left: 2vh;
@@ -76,12 +76,13 @@ path {
     width: 100%;
     margin-left: 14%;
     margin-top: 10%;
+    font-family:  'Poppins', sans-serif; 
 }
 
 svg { width: 400%; }
 svg textPath { 
   font-size: 30px;
-	font-family:  'Poppins', sans-serif;
+    font-family:  'Poppins', sans-serif;
     text-transform: uppercase;
 	letter-spacing: 20px;
     fill: #111;
@@ -89,4 +90,8 @@ svg textPath {
   background: #333;
 }
 
-
+section{
+    height: 75vh;
+    scroll-snap-align: start;
+    width: 100%
+}
