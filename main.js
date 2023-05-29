@@ -1,141 +1,102 @@
-let color1 = '#FFDBE9';
-let color2 = '#D1FEB8';
-let flag = true; 
-let button = document.getElementById('button');
-let trigger1 = document.getElementById('trigger1');
-let trigger2 = document.getElementById('trigger2');
-let trigger3 = document.getElementById('trigger3');
-let trigger4 = document.getElementById('trigger4');
-let trigger5 = document.getElementById('trigger5');
-let trigger6 = document.getElementById('trigger6');
-let quit = false;
-let exit = document.getElementById('exit');
-let exit1 = document.getElementById('exit1');
-let exit2 = document.getElementById('exit2');
-let exit3 = document.getElementById('exit3');
-let exit4 = document.getElementById('exit4');
-let exit5 = document.getElementById('exit5');
 
-button.addEventListener('click', function(){
-    if (flag == true){
-        button.style.background = color1;
-        trigger1.style.backgroundColor = "white";
-        trigger2.style.backgroundColor = "white";
-        trigger3.style.backgroundColor = "white";
-        trigger4.style.backgroundColor = "white";
-        trigger5.style.backgroundColor = "white";
-        trigger6.style.backgroundColor = "white";
-        flag = false;
+document.addEventListener('DOMContentLoaded', () => {
+    let mousePosX = 0,
+        mousePosY = 0,
+        mouseCircle = document.getElementById('mouse-circle');
+
+    document.onmousemove = (e) => {
+        mousePosX = e.pageX;
+        mousePosY = e.pageY;
     }
-    else if (flag == false){
-        button.style.background = color2;
-        trigger1.style.backgroundColor = "#ccff00";
-        trigger2.style.backgroundColor = "#ccff00";
-        trigger3.style.backgroundColor = "#ccff00";
-        trigger4.style.backgroundColor = "#ccff00";
-        trigger5.style.backgroundColor = "#ccff00";
-        trigger6.style.backgroundColor = "#ccff00";
-        flag = true;
+
+    let delay = 6,
+        revisedMousePosX = 0,
+        revisedMousePosY = 0;
+
+    function delayMouseFollow() {
+        requestAnimationFrame(delayMouseFollow);
+
+        revisedMousePosX += (mousePosX - revisedMousePosX) / delay;
+        revisedMousePosY += (mousePosY - revisedMousePosY) / delay; 
+
+        mouseCircle.style.top = revisedMousePosY + 'px';
+        mouseCircle.style.left = revisedMousePosX + 'px';
     }
+    delayMouseFollow();
+});
+
+let box = document.getElementById('box');
+let box2 = document.getElementById('box2');
+let box3 = document.getElementById('box3');
+let box4 = document.getElementById('box4');
+let box5 = document.getElementById('box5');
+let body5 = document.getElementById('body');
+var circle = document.querySelector('#circle');
+// maybe add a cool background swicth between the gradients 
+// everytime you ckick you get a little star or simple emoji
+
+box.addEventListener('mouseover', function(){
+    box.style.top = "0%"
 })
 
-trigger1.addEventListener('click', function(){
-    if (quit == false){
-    document.getElementById('genClothing').style.display = "block";
-}
+box.addEventListener('mouseout', function(){
+    box.style.top = "10%"
+    //document.getElementById('genClothing').style.display = "none";
+
 })
 
-exit.addEventListener('click', function(){
-    document.getElementById('genClothing').style.display = "none";
-    document.getElementById('portfolio').style.display = "none";
-    document.getElementById('oddPhobias').style.display = "none";
-    document.getElementById('dataVis').style.display = "none";
-    document.getElementById('holiday').style.display = "none";
-    document.getElementById('processing').style.display = "none";
+box2.addEventListener('mouseover', function(){
+    box2.style.top = "10%"
+    box.style.top = "0%"
 })
 
-
-trigger2.addEventListener('click', function(){
-    if (quit == false){
-    document.getElementById('portfolio').style.display = "block";
-}
+box2.addEventListener('mouseout', function(){
+    box2.style.top = "20%"
+    box.style.top = "10%"
 })
 
-exit1.addEventListener('click', function(){
-    document.getElementById('genClothing').style.display = "none";
-    document.getElementById('portfolio').style.display = "none";
-    document.getElementById('oddPhobias').style.display = "none";
-    document.getElementById('dataVis').style.display = "none";
-    document.getElementById('holiday').style.display = "none";
-    document.getElementById('processing').style.display = "none";
+box3.addEventListener('mouseover', function(){
+    box3.style.top = "10%"
+    box2.style.top = "5%"
+    box.style.top = "0%"
 })
 
-
-trigger3.addEventListener('click', function(){
-    if (quit == false){
-    document.getElementById('dataVis').style.display = "block";
-}
+box3.addEventListener('mouseout', function(){
+    box3.style.top = "30%"
+    box2.style.top = "20%"
+    box.style.top = "10%"
 })
 
-exit2.addEventListener('click', function(){
-    document.getElementById('genClothing').style.display = "none";
-    document.getElementById('portfolio').style.display = "none";
-    document.getElementById('oddPhobias').style.display = "none";
-    document.getElementById('dataVis').style.display = "none";
-    document.getElementById('holiday').style.display = "none";
-    document.getElementById('processing').style.display = "none";
+box4.addEventListener('mouseover', function(){
+    box4.style.top = "15%"
+    box3.style.top = "10%"
+    box2.style.top = "5%"
+    box.style.top = "0%"
 })
 
-
-
-trigger4.addEventListener('click', function(){
-    if (quit == false){
-    document.getElementById('oddPhobias').style.display = "block";
-}
+box4.addEventListener('mouseout', function(){
+    box4.style.top = "40%"
+    box3.style.top = "30%"
+    box2.style.top = "20%"
+    box.style.top = "10%"
 })
 
-exit3.addEventListener('click', function(){
-    document.getElementById('genClothing').style.display = "none";
-    document.getElementById('portfolio').style.display = "none";
-    document.getElementById('oddPhobias').style.display = "none";
-    document.getElementById('dataVis').style.display = "none";
-    document.getElementById('holiday').style.display = "none";
-    document.getElementById('processing').style.display = "none";
+box5.addEventListener('mouseover', function(){
+
 })
 
+box5.addEventListener('mouseout', function(){
 
-
-trigger5.addEventListener('click', function(){
-    if (quit == false){
-    document.getElementById('holiday').style.display = "block";
-}
-})
-
-exit4.addEventListener('click', function(){
-    document.getElementById('genClothing').style.display = "none";
-    document.getElementById('portfolio').style.display = "none";
-    document.getElementById('oddPhobias').style.display = "none";
-    document.getElementById('dataVis').style.display = "none";
-    document.getElementById('holiday').style.display = "none";
-    document.getElementById('processing').style.display = "none";
 })
 
 
-
-
-trigger6.addEventListener('click', function(){
-    if (quit == false){
-    document.getElementById('processing').style.display = "block";
-}
+body5.addEventListener('click', function(){
+    body5.style.backgroundColor= "white"
 })
 
-exit5.addEventListener('click', function(){
-    document.getElementById('genClothing').style.display = "none";
-    document.getElementById('portfolio').style.display = "none";
-    document.getElementById('oddPhobias').style.display = "none";
-    document.getElementById('dataVis').style.display = "none";
-    document.getElementById('holiday').style.display = "none";
-    document.getElementById('processing').style.display = "none";
+document.addEventListener('mousemove', function(e){
+    circle.style.top = e.pageY
+    circle.style.left = e.pageX
 })
 
 
